@@ -1,0 +1,26 @@
+何謂生命週期函數：
+    在某一時刻會自動調用並執行的函數
+    如render(), constructor()
+
+React 生命週期：
+
+1. Initialization(初始化)：
+    設定props跟state
+
+2. Mounting(掛載)：
+    componentWillMount()，在元件即將被掛載前執行
+    render()
+    componentDidMount()，在元件已被掛載後執行
+
+3. Updation(更新)
+    props:
+        componentWillReceiveProps()，在元件存在父元件中並且收到參數時。
+    props、states:
+        shouldComponentUpdate() ，詢問元件是否需要更新
+        componentWillUpdate()   ，若should為true，被更新的元件更新前
+        render()                ，更新時
+        componentDidUpdate()    ，在元件已被更新後執行
+
+4. Unmountimg(卸載)
+    componentWillUnmount()，在元件即將被移除前執行
+

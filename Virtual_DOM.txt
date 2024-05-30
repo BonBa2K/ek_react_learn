@@ -1,0 +1,8 @@
+JSX 
+=> React.createElement('div',{},React.createElement('input',{},newProductTitle))
+=> 虛擬DOM (透過diff算法比較差異，進而修改真實DOM，比較有效率) 
+=> 真實DOM
+
+diff算法：
+自root開始往下比較元件使否相同，一層比較完找下一層，
+找到不同時，該點為root的元件全更新。

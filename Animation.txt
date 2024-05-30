@@ -1,0 +1,48 @@
+ReactTransitionGroup：
+
+Transition：
+    Props：
+        1.nodeRef (https://stackoverflow.com/a/51127130/4671932)
+        2.children
+        3.in
+            default: false
+        4.mountOnEnter
+            default: false
+        5.unmountOnExit
+            default: false
+        6.appear
+            default: false
+        7.enter
+            default: true
+        8.exit
+            default: true
+        9.timeout
+            type: number | { enter?: number, exit?: number, appear?: number }
+                    timeout={500}
+                or 
+                    timeout={{
+                    appear: 500,
+                    enter: 300,
+                    exit: 500,
+                    }}
+    Props：
+        10.addEndListener
+            addEndListener={(node, done) => {
+                // use the css transitionend event to mark the finish of a transition
+                node.addEventListener('transitionend', done, false);
+                }
+            }
+        // hooks
+        11.onEnter、onEntering、onEntered
+        12.onExit、onExiting、onExited
+CssTransition：
+    Props：
+        1.ClassName
+            自動生成classes
+                MyClassNmae-appear, MyClassNmae-appear-active, MyClassNmae-appear-done
+                MyClassNmae-enter, MyClassNmae-enter-active, MyClassNmae-enter-done
+                MyClassNmae-exit, MyClassNmae-exit-active, MyClassNmae-exit-done
+        // hooks
+        2.onEnter、onEntering、onEntered
+        3.onExit、onExiting、onExited
+    

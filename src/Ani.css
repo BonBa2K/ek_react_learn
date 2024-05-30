@@ -1,0 +1,89 @@
+/* original */
+@keyframes hide-item {
+    0% {
+        opacity: 1;
+        color: red;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        color: blue;
+    }
+}
+
+@keyframes show-item {
+    100% {
+        opacity: 1;
+        color: red;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    0% {
+        opacity: 0;
+        color: blue;
+    }
+}
+
+.bottom-line {
+    width: 100%;
+    margin-top: 10px;
+    height: 2px;
+    background-color: black;
+    /* 你可以根据需要更改颜色 */
+}
+
+.o_show {
+    /* forwards 保持最後一幕 */
+    animation: show-item 2s ease-in forwards;
+}
+
+.o_hide {
+    /* forwards 保持最後一幕 */
+    animation: hide-item 2s ease-in forwards;
+}
+
+/* react-transition-group */
+
+
+/* --------------------- */
+
+.MyCl-appear,
+.MyCl-enter {
+    opacity: 0;
+    color: blue;
+}
+
+.MyCl-appear-active,
+.MyCl-enter-active {
+    opacity: 1;
+    animation: show-item 2s ease-in;
+}
+
+.MyCl-appear-done,
+.MyCl-enter-done {
+    opacity: 1;
+    color: red;
+}
+
+/* --------------------- */
+.MyCl-exit {
+    opacity: 1;
+    color: red;
+}
+
+.MyCl-exit-active {
+    opacity: 0;
+    animation: hide-item 2s ease-in;
+}
+
+.MyCl-exit-done {
+    opacity: 0;
+    color: blue;
+}

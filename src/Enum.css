@@ -1,0 +1,33 @@
+/* styles.css */
+/* ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  color: darkgreen;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+} */
+
+li.purple {
+  color: magenta;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  margin-bottom: 8px;
+}
+
+input[type="checkbox"] {
+  margin-left: 8px;
+}
+
+button {
+  margin-top: 8px;
+}
